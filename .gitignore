@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+.DS_Store
+.wav
+.mp3
+.ogg
+/Data
+Data/
