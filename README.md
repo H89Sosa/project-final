@@ -10,13 +10,21 @@ As a musician, I found myself struggling to learn to pay some of the parts on my
 
 We'll be focusing our tool in one genre -rock- for several reasons:
 	- The particular knowledge on this genre and the ability to categorize all the major features and instruments that compose this style.
+	
 	- Luckily for me, this genre is pretty conservative in its majority in terms of structure and sound, which can improve the result of our product.
+	
 	- The target of this product is the average home musician. This features could fit their needs. Generally speaking, this profile of people is usually interested in rock music and technology, due to their age.
+	
 	- Focusing on one style narrows the nearly infinite concept of music, and could help our models on better predictions.
+	
 	- The ability to extract and generate data.
+	
 	- Taking a modular approach on this project permits the eventual expansion to other genres.
+	
 	- As a product, it can be comercialized to this already existing consumer profile, just with this genre.
+	
 	- Personal preference. This might not seem important, but I feel I'll be more involved and focused if I work on this style.
+	
 ### - 1. Timbrical feature extraction
 
 For this aspect, the approach we could take is to create a learning sound library, trying to compile all the possible combinations of instruments and variations of each. Then, we would train a neural network to be able to classify each instrument and extract it.
