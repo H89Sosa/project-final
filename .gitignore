@@ -5,3 +5,5 @@
 .ogg
 /Data
 Data/
+your_project/*.wav
+your_project/*.mp3
