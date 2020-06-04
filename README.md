@@ -132,7 +132,7 @@ As we said earlier, we need our data shape to be divisible by 2 due to the reduc
 
 In order to automate the data import in our particular case, we define a function to load all the mp3 files in our organized multitrack folders. This way, we can also arrange them in a pandas dataframe for further organization:
 
-def mix_inst_tracks(filepath = '/Users/Sosa/Repos/project-final/your-project/Songs', mels= 512, song_sections= 1,  n_songs = 1, instrument = 'Drums', start_sec= 30, SAMPLES =327500):   
+	def mix_inst_tracks(filepath = '/Users/Sosa/Repos/project-final/your-project/Songs', mels= 512, song_sections= 1,  n_songs = 1, instrument = 'Drums', start_sec= 30, SAMPLES =327500):   
     ''' 
     Function that looks up in a structured folder (path/song/audiofile.mp3) and returns 
     n song sections in mel-spectrogram array.  
@@ -164,11 +164,11 @@ In just a few cycles of training, we can see some results:
 
 And this is our first prediction:
 
-<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/15s_predicted_sample3.png?raw=true" width="600" height="600" />
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/15s_predicted_sample3.png?raw=true" width="1000" height="500" />
 
 Compared with our desired output:
 
-<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/0Test%2015s%20sample.png?raw=true" width="600" height="600" />
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/0Test%2015s%20sample.png?raw=true" width="1000" height="500" />
 
 
 Well, it might seem that our model performs quite well! But we're **wrong**.
@@ -178,7 +178,7 @@ Our visual perception is tricky. If a pixel is displaced we wouldn't even notice
 As we can see, after the conversion to audio, our signal is not quite similar to the original one:
 
 
-<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/0Waveform%20comparison%20sample.png?raw=true" width="100" height="500" />
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/0Waveform%20comparison%20sample.png?raw=true" width="1000" height="500" />
 
 # Conclusions
 
