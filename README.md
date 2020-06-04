@@ -1,6 +1,5 @@
-IRONHACK LOGO
-
-#Instrument isolation with Deep Learning
+<img src="https://techsalesgroup.files.wordpress.com/2016/10/ironhack-logo-negro1.jpg" width="100" height="100" />
+#Instrument Isolation with Deep Learning
 ### By Hernán Sosa
 
 
@@ -29,7 +28,7 @@ With IPython we can easily reproduce our audio files:
 
 In order to understand our approach we'll need to know the basics of digital audio signals:
 
-![]()SINGLE FREQUENCY WAVEFORM
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/Single%20frequency%20waveform.png?raw=true" width="1000" height="500" />
 
 This is the aspect of a single frequency waveform. The y-axis represent its amplitude (energy in an instant of time). Because sound is a vibration, the amplitude range goes from -1 to 1, but in both cases its energy is equal.
 
@@ -41,7 +40,7 @@ Our goal is to identify this frequencies in order to capture them. The frequency
 
 But in RealWorld™, humans can hear frequencies from 20 to 20KHz  *(yea, right!)* and all this frequencies are mixed up in the same axis of time:
 
-![]()WAVEFORM OF A SNARE HIT
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/Waveform%20of%20a%20snare%20hit.png?raw=true" width="1000" height="500" />
 
 In this (real) audio waveform we see a mixture of nearly 20000 frequencies on the same axis. How to identify them?
 
@@ -61,7 +60,7 @@ In a few words, we'll be recognizing and grouping each frequency in our signal b
 
 The result is that we get something similar to the following plot, in which the x-axis is now the frequency, and the y-axis is the computed sum of the amplitude (power) of each one: 
 
-![]()SPECTRUM OF AN AUDIO SIGNAL
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/Spectrum%20of%20audio%20signal.png?raw=true" width="1000" height="500" />
 
 This representation is called the **spectrum** of a sound. Represents the timbrical characteristics of a sound in a time window.
 
@@ -71,15 +70,16 @@ Note that the y-axis is no longer negative. This is because in this transformati
 
 The spectrogram is a representation of the sound in a 2D plane, in which amplitude and frequency are embodied over time. Taking the spectrum of a sound, we'll map the amplitude of each frequency in a color-scale:
 
-![]() Colormapping
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/Colormapping.png?raw=true" width="1000" height="500" />
 
 By generating a series of spectrums, stacking them in the X-axis and plotting its color value on the y-axis, we end up with a spectrogram:
 
-![](https://i.makeagif.com/media/3-10-2016/I0DtmH.gif)
+<img src="https://i.makeagif.com/media/3-10-2016/I0DtmH.gif" width="500" height="200" />
 
 And this is the looks of our static spectrogram:
 
-![]()Spectrogram
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/Spectrogram.png?raw=true" width="1000" height="500" />
+
 
 Now, we've managed to condense our mp3 file onto an static 2D image. With this solution, we'll try to create a neural network capable of comparing the spectrogram of a mixed song, and generate the spectrogram of the instrument we want to extract.
 
@@ -119,7 +119,8 @@ We'll define a function to convert mel-spectrograms to audio. This function uses
 
 We can see that we have some loss in the audio signal due to the conversion:
 
-![]()
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/mel-reconstruction.png?raw=true" width="1000" height="500" />
+
 
 For now, this loss of quality is something we can afford. We'll proceed to create a function to automate the process of getting mel-spectrograms for some files:
 
@@ -153,15 +154,20 @@ Another reason for chosing this model is that the input and output share the sam
 
 It shrinks the samples and them reconstructs the signal. You can learn more about this model [here](https://towardsdatascience.com/unet-line-by-line-explanation-9b191c76baf5)
 
-![]() unet model image
+<img src="https://miro.medium.com/max/1400/1*f7YOaE4TWubwaFF7Z1fzNw.png" width="1000" height="500" />
 
 In just a few cycles of training, we can see some results:
 
-![]() learning curve
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/Learning%20curve.png?raw=true" width="500" height="500" />
 
 And this is our first prediction:
 
-![]() 5s_predicted_sample3
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/15s_predicted_sample3.png?raw=true" width="600" height="600" />
+
+Compared with our desired output:
+
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/0Test%2015s%20sample.png?raw=true" width="600" height="600" />
+
 
 Well, it might seem that our model performs quite well! But we're **wrong**.
 
@@ -169,7 +175,8 @@ Our visual perception is tricky. If a pixel is displaced we wouldn't even notice
 
 As we can see, after the conversion to audio, our signal is not quite similar to the original one:
 
-![]() Waveform comparison sample
+
+<img src="https://github.com/H89Sosa/project-final/blob/master/imgs/Readme/0Waveform%20comparison%20sample.png?raw=true" width="100" height="500" />
 
 # Conclusions
 
