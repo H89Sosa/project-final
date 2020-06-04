@@ -1,5 +1,7 @@
 <img src="https://techsalesgroup.files.wordpress.com/2016/10/ironhack-logo-negro1.jpg" width="100" height="100" />
+
 #Instrument Isolation with Deep Learning
+
 ### By Hernán Sosa
 
 
