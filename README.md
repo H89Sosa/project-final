@@ -12,7 +12,7 @@ Wait! What if we make a program to do so? If it works for me, maybe it'll work f
 
 That's the reason for this project. The intention is to be able to take a full mixed song and extract only the desired instrument, also as an audio file. The thing is that audio is like colors in some way: once you mix them, there's no way of turning back. Or that's the theory.
 
-Actually, we have plenty of tools to analyze and visualize audio. All this tools imply image processing, and image processing has suffered an exponential growth on its capabilities over the last years. Could we process audio with images recognition techniques?
+Actually, we have plenty of tools to analyze and visualize audio. All this tools imply image processing, and this technological field has suffered an exponential growth on its capabilities over the last years. Could we process audio with images recognition techniques?
 
 The spectrogram is a representation of an audio sample in which all the information for audio reproduction is taken into account. We'll be using it. But first, let's start from the beginning:
 
