@@ -44,7 +44,6 @@ As seen in other similar projects, the result of this extraction could not have 
 
 Once we have this sharpened signals, we would create a system that finds the notes that the instrument is playing (tone and time) by searching its fundamental tone and harmonics over the time and try to map them in a structured dataframe, in order to be able to make a visual extraction of them. We will look for libraries to traduce this data into a music sheet format generator.
 
-USAGE OF MIDI FILES TO HELP THE PROCESS????
 
 
-We are aware that introducing all this features is a bit too much for the time we're given. We'll focus on the timbrical feature extraction by the moment, and if we achieve good results we could try to approach the other phases.
+We are aware that introducing all this many features is a bit too much for the time we're given. We'll focus on the timbrical feature extraction by the moment, and if we achieve good results we could try to approach the other phases.

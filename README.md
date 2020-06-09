@@ -1,6 +1,6 @@
 <img src="https://techsalesgroup.files.wordpress.com/2016/10/ironhack-logo-negro1.jpg" width="100" height="100" />
 
-#Instrument Isolation with Deep Learning
+# Instrument Isolation with Deep Learning
 
 ### By Hernán Sosa
 
@@ -12,9 +12,9 @@ Wait! What if we make a program to do so? If it works for me, maybe it'll work f
 
 That's the reason for this project. The intention is to be able to take a full mixed song and extract only the desired instrument, also as an audio file. The thing is that audio is like colors in some way: once you mix them, there's no way of turning back. Or that's the theory.
 
-Actually, we have plenty of tools to analyze and visualize audio. All this tools imply image processing, and image processing has suffered an exponential growth on its capabilities over the last years. And how can we process audio with images?
+Actually, we have plenty of tools to analyze and visualize audio. All this tools imply image processing, and this technological field has suffered an exponential growth on its capabilities over the last years. Could we process audio with images recognition techniques?
 
-The spectrogram is a representation of an audio sample in which all the information for audio reproduction is taken into account. We'll for with them. But first, let's begin from the beginning:
+The spectrogram is a representation of an audio sample in which all the information for audio reproduction is taken into account. We'll be using it. But first, let's start from the beginning:
 
 # Import audio files
 
@@ -46,8 +46,6 @@ But in RealWorld™, humans can hear frequencies from 20 to 20KHz  *(yea, right!
 
 In this (real) audio waveform we see a mixture of nearly 20000 frequencies on the same axis. How to identify them?
 
-Spectrogram is a visual representation of the audio which, through a series of processes, collects information for all audio characteristics (frequency, amplitude and phase) into a single image.
-
 # Creating Spectrogram
 
 Our approach for this model will be transforming our 1D audio signal into a 2D image without losing **much** information (you'll understand the bold statement in a moment). This can be done through the following process:
@@ -58,7 +56,7 @@ The Short-time Fourier transform (STFT), is a Fourier-related transform used to 
 
 For a full understanding of the Fourier Transform you can check this [video by 3blue1brown](https://www.youtube.com/watch?v=spUNpyF58BY).
 
-In a few words, we'll be recognizing and grouping each frequency in our signal by a time window (hop). This time window is a nº of samples (usually 512) the function needs to properly 'print' the value of each frequency in a 2D plane. In the process, we lose some information about each individual sample phase and amplitude (hence the **some** statement), but for our prupose this loss is acceptable since we'll be using a shorter time window of 512 samples.
+In a few words, we'll be recognizing and grouping each frequency in our signal by a time window (hop). This time window is a nº of samples (usually 512) the function needs to properly 'print' the value of each frequency in a 2D plane. In the process, we lose some information about each individual sample phase and amplitude (hence the **some** statement), but for our prupose this loss is acceptable.
 
 The result is that we get something similar to the following plot, in which the x-axis is now the frequency, and the y-axis is the computed sum of the amplitude (power) of each one: 
 
